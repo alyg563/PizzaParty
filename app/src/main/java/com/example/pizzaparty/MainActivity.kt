@@ -10,12 +10,30 @@ import kotlin.math.ceil
 
 const val SLICES_PER_PIZZA = 8
 
+/**
+ * This is the default constructor for an application that
+ * calculates how much pizza should be ordered for a pizza
+ * party based on how many people will be attending and
+ * how hungry they are.
+ */
 class MainActivity : AppCompatActivity() {
 
     private lateinit var numAttendEditText: EditText
     private lateinit var numPizzasTextView: TextView
     private lateinit var howHungryRadioGroup: RadioGroup
 
+    /**
+     * This Activity method runs at the start of the application
+     * and loads the layout of the app.
+     *
+     * Here, [onCreate] will use the layout from activity_main.xml
+     * and establish 3 important app variables:
+     * numAttendEditText,
+     * numPizzasTextView,
+     * howHungryRadioGroup
+     *
+     * @param savedInstanceState Bundle?
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -24,6 +42,13 @@ class MainActivity : AppCompatActivity() {
         howHungryRadioGroup = findViewById(R.id.hungry_radio_group)
     }
 
+    /**
+     * This method calculates how much pizza should be ordered for a pizza
+     * party based on how many people will be attending and
+     * how hungry they are once a button is clicked.
+     *
+     * @param view View
+     */
     fun calculateClick(view: View) {
 
         // Get the text that was typed into the EditText

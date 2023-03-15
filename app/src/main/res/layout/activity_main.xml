@@ -31,7 +31,7 @@
         android:layout_marginEnd="215dp"
         android:layout_marginBottom="2dp"
         android:ems="10"
-        android:hint="# of people"
+        android:hint="@string/of_people"
         android:inputType="number"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
